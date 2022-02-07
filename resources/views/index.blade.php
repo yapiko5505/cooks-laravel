@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset='utf-8'>
-        <title>cooksmap</title>
-        <style>body {padding: 10px;}</style>
-    </head>
-    <body>
+
+    @extends('layouts')
+
+    @section('content')
+
         <h1>お店一覧</h1>
 
+        <table class='table table-striped table-hover'>
+            <tr>
+                <th>カテゴリ</th><th>店名</th><th>住所</th>
+            </tr>
+
         @foreach ($shops as $shop)
-            <p>
-                {{ $shop->category->name }},
-                {{ $shop->name }},
-                {{ $shop->address }}
-            </p>
+            <tr>
+                <td>{{ $shop->category->name }}</td>
+                <td>
+                    <a href={{ route('shop.detail', ['id' => $shop->id]) }}>
+                        {{ $shop->name }}
+                    </a>
+                </td>               
+                <td>{{ $shop->address }}</td>
+            </tr>
         @endforeach
-    </body>
-</html>
+    @endsection
