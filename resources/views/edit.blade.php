@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layout')
 @section('content')
     <h1>{{$shop->name}}を編集する</h1>
     {{ Form::model($shop, ['route' => ['shop.update', $shop->id]]) }}

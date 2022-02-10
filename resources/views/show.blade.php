@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layout')
 @section('content')
     <h1>{{ $shop->name }}</h1>
     <div>

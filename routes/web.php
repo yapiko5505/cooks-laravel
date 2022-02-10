@@ -23,6 +23,11 @@ Route::get('/shop/{id}', 'App\Http\Controllers\ShopController@show')->name('shop
 Route::delete('/shop/{id}', 'App\Http\Controllers\ShopController@destory')->name('shop.destory');
 
 Route::get('/', function () {
-    // return view('welcome');
-     return redirect('/shops');
+    //    return view('welcome');
+      return redirect('/shops');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/shops',[App\Http\Controllers\ShopController::class, 'index'])->name('shop.list');

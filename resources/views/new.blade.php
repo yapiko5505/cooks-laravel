@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layout')
 @section('content')
     <h1>新しいお店</h1>
     {{ Form::open(['route' => 'shop.store'])}}

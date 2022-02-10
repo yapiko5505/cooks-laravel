@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Shop;
 use App\Models\Category;
+
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -12,6 +14,7 @@ class ShopController extends Controller
 
     public function index()
     {
+        
         $shops = Shop::all();
         return view('index', ['shops' => $shops]);
     }
