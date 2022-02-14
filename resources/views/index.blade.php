@@ -4,6 +4,7 @@
     @section('content')
 
         <h1>お店一覧</h1>
+       
 
         <table class='table table-striped table-hover'>
                 <tr>
@@ -26,4 +27,6 @@
         <div>
             <a href={{ route('shop.new') }} class='btn btn-outline-primary'>新しいお店</a>
         </div>
+        <br><a href="{{ url('/home') }}">ログアウト</a> 
+       
     @endsection

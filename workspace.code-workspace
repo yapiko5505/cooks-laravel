@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\htdocs"
+		},
+		{
+			"path": "..\\..\\Users\\Tatebayashi\\Downloads\\message-laravel-main\\message-laravel-main"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
